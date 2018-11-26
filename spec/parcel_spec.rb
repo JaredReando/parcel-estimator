@@ -23,17 +23,24 @@ describe(Parcel) do
     end
   end
 
+  describe("#surface_area") do
+    it("returns surface area of parcel") do
+      test_parcel = Parcel.new(15, 10, 26, 24, "Ground")
+      expect(test_parcel.surface_area()).to(eq(1600))
+    end
+  end
+
   describe("#ship_cost") do
     it("returns ship cost of parcel") do
       test_parcel = Parcel.new(15, 10, 6, 24, "Ground")
-      expect(test_parcel.ship_cost()).to(eq("$34.00"))
+      expect(test_parcel.ship_cost()).to(eq("$40.00"))
     end
   end
 
   describe("#ship_cost") do
     it("returns ship cost of parcel") do
       test_parcel = Parcel.new(15, 10, 26, 24, "Next Day Air")
-      expect(test_parcel.ship_cost()).to(eq("$53.00"))
+      expect(test_parcel.ship_cost()).to(eq("$55.00"))
     end
   end
 

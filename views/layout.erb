@@ -6,6 +6,37 @@
   </head>
   <body>
     <div class="container">
+      <h1>Enter your parcel details: </h1>
+
+      <form action="/output">
+
+        <div class="form-group">
+          <label for="ship_speed">Ship Speed</label>
+          <select class="form-control" id="ship_speed" name="ship_speed">
+            <option>Ground</option>
+            <option>Three Day</option>
+            <option>Second Day</option>
+            <option>Next Day Air</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="length">Length</label>
+          <input id="length" name="length" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="width">Width</label>
+          <input id="width" name="width" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="width">Height</label>
+          <input id="height" name="height" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="width">Weight (lbs)</label>
+          <input id="weight" name="weight" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn-success">Go!</button>
+      </form>
       <%= yield %>
     </div>
   </body>
